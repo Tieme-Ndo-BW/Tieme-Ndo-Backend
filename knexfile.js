@@ -8,7 +8,7 @@ module.exports = {
     connection: {
       database: process.env.DB_DEV_DATABASE ,
       user: process.env.DB_DEV_USER,
-      password: process.env.DB_DEV_PASSWROD
+      password: process.env.DB_DEV_PASSWORD
     },
     migrations: {
       directory: "./database/migrations"
