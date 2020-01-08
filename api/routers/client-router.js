@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     })
     .catch(err => {
         res.status(500).json({ message: "Error retrieving data..."});
-    })
+    });
 });
 
 router.get('/:id', (req, res) => {
