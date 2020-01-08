@@ -1,0 +1,41 @@
+{
+  "name": "tieme-ndo-backend",
+  "version": "1.0.0",
+  "description": "Build week Tieme-Ndo Backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "server": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tieme-Ndo-BW/Tieme-Ndo-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tieme-Ndo-BW/Tieme-Ndo-Backend/issues"
+  },
+  "homepage": "https://github.com/Tieme-Ndo-BW/Tieme-Ndo-Backend#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.6",
+    "morgan": "^1.9.1",
+    "pg": "^7.17.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
