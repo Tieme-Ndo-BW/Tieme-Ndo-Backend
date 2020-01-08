@@ -1,9 +1,9 @@
 const express = require('express');
 const server = express();
-// require("dotenv").config();
 const helmet = require('helmet');
 const morgan = require('morgan');
 const cors = require('cors');
+const clientRouter = require('./api/routers/client-router');
 
 const port = process.env.PORT || 4000;
 
@@ -12,6 +12,7 @@ server.use(express.json());
 server.use(helmet());
 server.use(cors());
 server.use(morgan('dev'));
+server.use('/api/clients', clientRouter);
 
 
 server.get('/', (req,res) => {
