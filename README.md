@@ -1,6 +1,6 @@
 # Tieme-Ndo-Backend
 
-# Clients Table Field Names and Values
+# Clients Table Field Names and Types
 
 | Value | Type |
 | ------| ------|
