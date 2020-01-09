@@ -11,8 +11,8 @@
 | CurrentAmount | Integer |
 | LoanInitiation| Date |
 | DueDate | Date |
-| BagsOfMaize | Integer |
-| Goal | Integer |
+| BagsOfMaize | Integer(Optional) |
+| Goal | Integer(Optional) |
 
 
 # Endpoints
