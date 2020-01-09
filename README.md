@@ -9,8 +9,8 @@
 | VillageName| String |
 | LoanAmount | Integer |
 | CurrentAmount | Integer |
-| LoanInitiation| Date |
-| DueDate | Date |
+| LoanInitiation| Date(String) |
+| DueDate | Date(String) |
 | BagsOfMaize | Integer(Optional) |
 | Goal | Integer(Optional) |
 
@@ -25,3 +25,22 @@
 | .DELETE to delete a single client | https://lambda-tmb.herokuapp.com/api/clients/:id | REQUIRED |
 | .PUT to change any values of a given client | https://lambda-tmb.herokuapp.com/api/clients/:id | REQUIRED |
 
+
+# Staff Member Field Names and Types
+
+| Value | Type |
+| ----- | ----- |
+| Username | String |
+| Password | String |
+| FirstName | String |
+| LastName | String |
+| Birthday | Date(String) |
+
+# Endpoints 
+
+| CRUD Operation | URL | Authentication |
+| ------------- | -------- | ---------- |
+| .GET to view all staff members | https://lambda-tmb.herokuapp.com/api/auth/ | REQUIRED |
+| .GET to view a specific staff member | https://lambda-tmb.herokuapp.com/api/auth/:id | REQUIRED |
+| .DELETE to a single staff member | https://lambda-tmb.herokuapp.com/api/auth/:id | REQUIRED |
+| .PUT to change any values of a given staff member | https://lambda-tmb.herokuapp.com/api/auth/:id | REQUIRED |
