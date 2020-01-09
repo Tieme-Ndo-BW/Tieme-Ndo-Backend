@@ -1,6 +1,7 @@
 const express = require('express');
 
 const models = require('./helpers/clientDb');
+const authenticate = require('../../auth/restricted-middleware');
 
 const router = express.Router();
 
@@ -10,7 +11,7 @@ router.get('/', (req, res) => {
         res.status(200).json(model);
     })
     .catch(err => {
-        res.status(500).json({ message: "Error retrieving data..."});
+        res.status(500).json({ message: `Error retrieving data... ${err}`});
     });
 });
 
@@ -33,7 +34,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req,res) => {
+router.post('/', authenticate, (req,res) => {
     const modelData = req.body;
 
     models.insert(modelData)
@@ -41,11 +42,11 @@ router.post('/', (req,res) => {
         res.status(201).json(newModel);
     })
     .catch(err => {
-        res.status(500).json({ message: "Error Creating new client..."});
+        res.status(500).json({ message: `Error Creating new client... ${err}`});
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', authenticate, (req, res) => {
     const { id } = req.params;
 
     models.remove(id)
@@ -64,7 +65,7 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id',authenticate, (req, res) => {
     const { id } = req.params;
     const changes = req.body;
 

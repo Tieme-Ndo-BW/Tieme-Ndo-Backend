@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const cors = require('cors');
 const clientRouter = require('./api/routers/client-router');
+const authRouter = require('./auth/auth-router');
 
 const port = process.env.PORT || 4000;
 
@@ -13,6 +14,7 @@ server.use(helmet());
 server.use(cors({credentials: true}));
 server.use(morgan('dev'));
 server.use('/api/clients', clientRouter);
+server.use('/api/auth', authRouter)
 
 
 server.get('/', (req,res) => {
