@@ -3,6 +3,7 @@
 # Clients Table Field Names and Values
 
 | Value | Type |
+| ------| ------|
 | FirstName| String |
 | LastName| String |
 | VillageName| String |
@@ -17,6 +18,7 @@
 # Endpoints
 
 | CRUD Operation | URL |
+| -------------- | ------|
 | .GET to view all clients | https://lambda-tmb.herokuapp.com/api/clients |
 | .GET to view a specific client | https://lambda-tmb.herokuapp.com/api/clients/:id |
 | .POST to create a new client | https://lambda-tmb.herokuapp.com/api/clients |
