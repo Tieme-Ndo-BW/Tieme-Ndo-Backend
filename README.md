@@ -40,6 +40,8 @@
 
 | CRUD Operation | URL | Authentication |
 | ------------- | -------- | ---------- |
+| .POST to register a new staff member | https://lambda-tmb.herokuapp.com/api/auth/register | Not REQUIRED |
+| .POST to login and receive a JSON token (MUST register a staff member first!!) | https://lambda-tmb.herokuapp.com/api/auth/login | Not REQUIRED |
 | .GET to view all staff members | https://lambda-tmb.herokuapp.com/api/auth/ | REQUIRED |
 | .GET to view a specific staff member | https://lambda-tmb.herokuapp.com/api/auth/:id | REQUIRED |
 | .DELETE to a single staff member | https://lambda-tmb.herokuapp.com/api/auth/:id | REQUIRED |
