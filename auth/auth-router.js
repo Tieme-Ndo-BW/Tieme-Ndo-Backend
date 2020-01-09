@@ -2,8 +2,9 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const Users = require("./auth-model.js");
+const authenticate = require('./restricted-middleware');
 
-router.get('/', (req,res) => {
+router.get('/', authenticate, (req,res) => {
     Users.findAllStaff()
     .then(staff => {
         res.status(200).json(staff);
@@ -13,7 +14,7 @@ router.get('/', (req,res) => {
     });
 });
 
-router.get('/:id', (req,res) => {
+router.get('/:id', authenticate, (req,res) => {
     const { id } = req.params;
 
     Users.findByStaffId(id)
@@ -32,7 +33,7 @@ router.get('/:id', (req,res) => {
     });
 });
 
-router.delete('/:id', (req,res) => {
+router.delete('/:id', authenticate, (req,res) => {
     const { id } = req.params;
 
     Users.removeStaff(id)
@@ -51,7 +52,7 @@ router.delete('/:id', (req,res) => {
     });
 });
 
-router.put('/:id', (req,res) => {
+router.put('/:id', authenticate, (req,res) => {
     const { id } = req.params;
     const changes = req.body;
 
