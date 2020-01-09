@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         res.status(200).json(model);
     })
     .catch(err => {
-        res.status(500).json({ message: "Error retrieving data..."});
+        res.status(500).json({ message: `Error retrieving data... ${err}`});
     });
 });
 
@@ -41,7 +41,7 @@ router.post('/', (req,res) => {
         res.status(201).json(newModel);
     })
     .catch(err => {
-        res.status(500).json({ message: "Error Creating new client..."});
+        res.status(500).json({ message: `Error Creating new client... ${err}`});
     });
 });
 
