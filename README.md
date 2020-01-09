@@ -17,11 +17,11 @@
 
 # Endpoints
 
-| CRUD Operation | URL |
-| -------------- | ------|
-| .GET to view all clients | https://lambda-tmb.herokuapp.com/api/clients |
-| .GET to view a specific client | https://lambda-tmb.herokuapp.com/api/clients/:id |
-| .POST to create a new client | https://lambda-tmb.herokuapp.com/api/clients |
-| .DELETE to delete a single client | https://lambda-tmb.herokuapp.com/api/clients/:id |
-| .PUT to change any values of a given client | https://lambda-tmb.herokuapp.com/api/clients/:id |
+| CRUD Operation | URL | Authentication |
+| -------------- | ------| ----------|
+| .GET to view all clients | https://lambda-tmb.herokuapp.com/api/clients | Not REQUIRED |
+| .GET to view a specific client | https://lambda-tmb.herokuapp.com/api/clients/:id | Not REQUIRED |
+| .POST to create a new client | https://lambda-tmb.herokuapp.com/api/clients | REQUIRED |
+| .DELETE to delete a single client | https://lambda-tmb.herokuapp.com/api/clients/:id | REQUIRED |
+| .PUT to change any values of a given client | https://lambda-tmb.herokuapp.com/api/clients/:id | REQUIRED |
 
